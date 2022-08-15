@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;800&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     <title>Weather Me</title>
 </head>
@@ -16,26 +16,14 @@
             <!-- Card -->
             <div class="card">
                 <div class="search">
-                    <nav>
-                        <ul>
-                            <li>
-                                <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-                                <form method="post" autocomplete="off" target="dummyframe">
-                                    <input type="text" name="s" placeholder="Location Name" id="s"><button onclick="search()">Search</button>
-                                </form>
-                            </li>
-                            <li style="float: right; margin-left: 1rem;">
-                                <a href="https://gavineby.netlify.app" target="_blank"><img src="img/favicon.png" alt="Home"></a>
-                                <a href="https://github.com/gavineby/weather-me" target="_blank"><img src="img/github.png" alt="Github"></a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+                    <form method="post" autocomplete="off" target="dummyframe">
+                        <input type="text" name="s" placeholder="Location Name" id="s" required><button onclick="search()">Search</button>
+                    </form>
                 </div>
 
-                <div id="weatherContainer" style="padding: 0;">
-                    <div id="weather">
+                <div id="output">
                         
-                    </div>
                 </div>
             </div>
         </div>
@@ -47,8 +35,8 @@
             <!-- Card -->
             <div class="card">
                 <div class="container">
-                    <div id="yourWeather">
-                        Allow location access for your location's weather!
+                    <div id="your-weather">
+                        <p>Allow location access for your location's weather.</p>
                     </div>
                 </div>
             </div>
@@ -59,6 +47,7 @@
     <section class="sources">
         <div class="container">
             <a href="https://openweathermap.org" target="_blank">Weather from OpenWeatherMap's Api</a>
+            <a href="https://github.com/gavineby/weather-me" target="_blank">Github for project's code</a>
         </div>
     </section>
 
